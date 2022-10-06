@@ -18,7 +18,8 @@ export default function PostPage({post}){
 export async function getStaticPaths() {
 
     const paths = await getSlugs("posts");
-  
+    paths && console.log('in the posts [slugs] page, events with paths ' + JSON.stringify(paths) + ' should be rendered')
+
     return {
         paths,
         //this option below renders in the server (at request time) pages that were not rendered at build time
@@ -33,6 +34,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
 
 const post = await getPost(params.slug);
+post && console.log('in the event slug page, the static Props function returns ', post)
 
 return {
     props: {

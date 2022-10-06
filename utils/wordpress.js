@@ -1,4 +1,4 @@
-const BASE_URL = "https://my-wordpress.sportslink.info/wp-json/wp/v2";
+const BASE_URL = "https://wp-api.codemountain.space/wp-json/wp/v2";
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + "/posts?_embed");
@@ -42,6 +42,7 @@ export async function getSlugs(type) {
       },
     };
   });
+  // produces endpoints at which the 
   return elementsIds;
 }
 

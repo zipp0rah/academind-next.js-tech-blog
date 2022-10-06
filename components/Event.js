@@ -15,8 +15,8 @@ export default function Event({event, featuredMedia}) {
             </Link>
             <div className="card-body">
                 <h5 className="card-title">{event.title.rendered}</h5>
-            <div className="card-text" dangerouslySetInnerHTML={{__html: event.excerpt.rendered}}></div>
-                <p className="card-text"><small className="text-muted">{(event.acf.date)}</small></p>
+            {/* <div className="card-text" dangerouslySetInnerHTML={{__html: event.excerpt.rendered}}></div> */}
+                <p className="card-text"><small className="text-muted">{(event.event_date)}</small></p>
                 <Link href={`/events/${event.slug}`}>
                     <a className="btn btn-primary">See more</a>
                 </Link>
